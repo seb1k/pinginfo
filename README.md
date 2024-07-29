@@ -19,6 +19,9 @@ Example : (/root/pingtext.txt)
 ```
 
 ### Install :
+
+Create /root/pinginfo.sh
+
 Create a service and enable it :
 
 
