@@ -1,7 +1,7 @@
 # pinginfo
 Shell script that writes to a file when a server loses internet
 
-Write in /root/pingtest.txt each time the server is started and loses internet (ping on 8.8.8.8 every minute)
+Write in /root/pingtest.txt each time the server is started or loses internet (ping on 8.8.8.8 every minute)
 
 Example : (/root/pingtext.txt)
 
