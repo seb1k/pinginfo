@@ -1,12 +1,12 @@
 # pinginfo
-Script that informs you when a server loses internet
+Shell script that writes to a file when a server loses internet
 
-Add info in /root/pingtest.txt each time the server is started and loses internet (ping on 8.8.8.8)
+Write in /root/pingtest.txt each time the server is started and loses internet (ping on 8.8.8.8 every minute)
 
 Example : (/root/pingtext.txt)
 
 ```
- 18/05 19:22 > 19:23 PingDown
+18/05 19:22 > 19:23 PingDown
 18/05 19:33 > 19:34 PingDown
 27/05 18:53 > 18:56 PingDown
 04/06 10:30 Started!
@@ -18,12 +18,13 @@ Example : (/root/pingtext.txt)
 13/07 10:27 > 10:30 PingDown
 ```
 
-Install :
-Create a service a execute it :
+### Install :
+Create a service and enable it :
+
 
 /etc/systemd/system/pinginfo.service
-```
 
+```
 [Unit]
 Description=hit service
 After=network.target
@@ -35,4 +36,6 @@ ExecStart=/root/pinginfo.sh
 [Install]
 WantedBy=multi-user.target
 ```
+```
 systemctl enable pinginfo
+```
